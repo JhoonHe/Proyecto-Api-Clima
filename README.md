@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Proyecto Api Clia
+# Proyecto Api Clima
 Proyecto realizado en Angular para visualizar el clima de varias ciudades del mundo.
 
 ## Herramientas
