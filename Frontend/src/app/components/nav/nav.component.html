@@ -1,0 +1,8 @@
+<nav>
+    <div class="logo">Weather Api</div>
+    <div class="boton">
+        <button *ngIf="auth.isLoggedIn() | async" (click)="auth.logout()">Logout</button>
+        <!-- <a [routerLink]="login"></a> -->
+        <a *ngIf="!(auth.isLoggedIn() | async)"routerLink="/login">Login</a>
+    </div>
+</nav>

@@ -1,0 +1,7 @@
+<form *ngIf="!(auth.isLoggedIn() | async)" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="email">
+    <br>
+    <input type="text" formControlName="password">
+    <br>
+    <button type="submit">Enviar</button>
+</form>
