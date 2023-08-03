@@ -10,5 +10,5 @@ export class NavComponent {
 
   constructor(
     public auth: AuthService
-  ){}
+  ) { }
 }
