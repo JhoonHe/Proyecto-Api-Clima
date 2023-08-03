@@ -26,5 +26,6 @@
         <li>{{weather}}</li>
         <li>Descripción: {{data?.weather?.[0]?.description}}</li>
     </ul>
-    <i [class]="weatherIcon"></i>
+    <!-- <i [class]="weatherIconUrl"></i> -->
+    <img [src]="weatherIconUrl">
 </div>

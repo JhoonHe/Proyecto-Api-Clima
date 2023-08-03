@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
 
   data: any = "";
   weather: string = "";
-  weatherIcon: string = "";
+  // weatherIcon: string = "";
+  weatherIconUrl: string = "";
   // temp: number = 0;
   // tempCelsius: string = "";
 
@@ -42,7 +43,7 @@ export class HomeComponent implements OnInit {
         console.log(response);
         this.data = response;
 
-        this.checkWeather(response.weather[0].main);
+        this.checkWeather(response.weather[0].main, response.weather[0].icon);
 
 
       }),
@@ -64,6 +65,8 @@ export class HomeComponent implements OnInit {
         ((response: any) => {
           console.log(response);
           this.data = response;
+          this.checkWeather(response.weather[0].main, response.weather[0].icon);
+
         }),
         ((error: any) => {
           console.log("Error");
@@ -76,85 +79,89 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  checkWeather = ((weather: string) => {
+  checkWeather = ((weather: string, weatherIcon: string) => {
+
+    console.log("a", weatherIcon);
+
 
     if (weather === "Thunderstorm") {
       console.log(1);
       this.weather = "Tormenta eléctrica"
-      this.weatherIcon = "fa-solid fa-cloud-bolt";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Drizzle") {
       console.log(2);
       this.weather = "Llovizna"
-      this.weatherIcon = "fa-solid fa-cloud-rain";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Rain") {
       console.log(3);
       this.weather = "Lluvia"
-      this.weatherIcon = "fa-solid fa-cloud-showers-heavy";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Snow") {
       console.log(4);
       this.weather = "Nieve"
-      this.weatherIcon = "fa-solid fa-snowflake";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Mist") {
       console.log(5);
       this.weather = "Niebla"
-      this.weatherIcon = "fa-solid fa-smog";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Smoke") {
       console.log(6);
       this.weather = "Humo"
-      this.weatherIcon = "fa-solid fa-smog";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Haze") {
       console.log(7);
       this.weather = "Neblina"
-      this.weatherIcon = "fa-solid fa-smog";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Dust") {
       console.log(8);
       this.weather = "Polvo en suspensión"
-      this.weatherIcon = "fa-solid fa-smog";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Fog") {
       console.log(9);
       this.weather = "Niebla densa"
-      this.weatherIcon = "fa-solid fa-smog";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Sand") {
       console.log(10);
       this.weather = "Arena en suspensión"
-      this.weatherIcon = "fa-solid fa-smog";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Ash") {
       console.log(11);
       this.weather = "Ceniza en suspensión"
-      this.weatherIcon = "fa-solid fa-smog";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Squall") {
       console.log(12);
       this.weather = "Ráfaga"
-      this.weatherIcon = "fa-solid fa-bolt-lightning";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Tornado") {
       console.log(13);
       this.weather = "Tornado"
-      this.weatherIcon = "fa-solid fa-tornado";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Clear") {
       console.log(14);
       this.weather = "Cielo despejado"
-      this.weatherIcon = "fa-solid fa-sun";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     } else if (weather === "Clouds") {
       console.log(15);
       this.weather = "Nubes"
-      this.weatherIcon = "fa-solid fa-cloud";
+      this.weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
     }
 
   })
+
 
 }
