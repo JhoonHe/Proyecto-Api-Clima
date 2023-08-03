@@ -1,5 +1,12 @@
 <p *ngIf="auth.isLoggedIn() | async">Hola</p>
-<h1>Home</h1>
+
+<form *ngIf="auth.isLoggedIn() | async" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="place">
+    <br>
+    <input type="text" formControlName="country">
+    <br>
+    <button type="submit">Enviar</button>
+</form>
 
 <div class="card">
     <h2>{{data.name}}</h2>
@@ -16,7 +23,8 @@
         <li>Viento | Velocidad: {{data?.wind?.speed}} m/s</li>
         <li>Viento | Dirección: {{data?.wind?.deg}} m/s</li>
         <li>Porcentaje de nubosidad {{data?.clouds?.all}}%</li>
-        <li>{{data?.weather?.[0]?.main}}</li>
+        <li>{{weather}}</li>
         <li>Descripción: {{data?.weather?.[0]?.description}}</li>
     </ul>
+    <i [class]="weatherIcon"></i>
 </div>
