@@ -9,9 +9,9 @@ var app = express()
     .use(bodyParser.json())
     .use(bodyParser.urlencoded({ extended: true }));
 
-// app.listen(10101, function () {
-//     console.log('Example app listening on port 10101!');
-// });
+app.listen(10101, function () {
+    console.log('Example app listening on port 10101!');
+});
 
 app.get('/test', (req, res) => {
     res.send('¡Un saludo desde el Backend!');
