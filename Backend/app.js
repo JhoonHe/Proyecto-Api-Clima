@@ -13,7 +13,7 @@ app.listen(10101, function () {
     console.log('Example app listening on port 10101!');
 });
 
-app.get('/test', (req, res) => {
+app.get('', (req, res) => {
     res.send('¡Un saludo desde el Backend!');
 })
 
