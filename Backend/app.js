@@ -18,6 +18,10 @@ const app = express()
 
 app.use("/login", login);
 
+app.get('', (req, res) => {
+    res.send('¡Un saludo desde el Backend!');
+})
+
 app.listen(PORT, () => {
   console.log(`Servidor express ejecutado en el puerto ${PORT}`);
 });
