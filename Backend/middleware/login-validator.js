@@ -13,16 +13,7 @@ function validator(req, res, next) {
   next();
 }
 
-function validatorCredentials(req, res, next) {
-  if (req.body.email === "test@gmail.com" && req.body.password === "12345") {
-    next();
-    return;
-  }
-  return res.status(400).json({ Status: "error" });
-}
-
 module.exports = {
   validatorParams,
-  validator,
-  validatorCredentials,
+  validator
 };
