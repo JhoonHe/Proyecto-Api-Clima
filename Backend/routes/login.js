@@ -7,7 +7,6 @@ router.post(
   "/",
   validatorLogin.validatorParams,
   validatorLogin.validator,
-  validatorLogin.validatorCredentials,
   loginController.login
 );
 
