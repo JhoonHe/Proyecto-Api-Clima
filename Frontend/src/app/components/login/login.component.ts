@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
 
     if (this.form.valid) {
-      this.client.postRequest("https://weather-api-311.onrender.com/login",
+      this.client.postRequest("http://localhost:10101/login/",
         {
           email: this.form.value.email,
           password: this.form.value.password

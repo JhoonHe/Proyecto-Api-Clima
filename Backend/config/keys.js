@@ -1,0 +1,4 @@
+module.exports = {
+  KEY_TOKEN:
+    "xqa275Q1LyxesU/4WwhqoBldGKRKqp9i9JnIkTOw4dVnp97FCX7f/WtpjKaPIt8zgDkzFZle8nZVPwjVo6ijSRsJIEELbCHv2mCcGo+MhLQzsTLxcXWY3kRz5kWUywN5zQ3mNwNObp9ehBOnIXFvcT0SlBEgskMUAKzJ3ckbxc4v+sfGZRDr1ZOkGj8aDKFaM6Ff+YG5oBNDRzaK/sD1S1L+zwUWEmna2cuXkhHiq858rCED+09aYDpSvAw3GiszbuYvGlbbaC+ZcRhwe+sSvQppibBcvQKq6mCynLGVIKiGI+Xs3r1Axp2w6inf1t5IFTcw4WXdz7pZxMQnHbYv2A==",
+};
